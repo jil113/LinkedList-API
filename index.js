@@ -6,12 +6,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 const APIError = require('./APIError');
 process.env.NODE_ENV = 'development';
-//const key = 'dsadsa';
 
 const { SECRET_KEY } = require('./config');
-// const db = require('./db');
-// const bcrypt = require('bcrypt');
-// const jwt = require('jsonwebtoken');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -27,7 +23,7 @@ app.post('/company-auth', companyAuthHandler);
 app.use('/users', usersRoutes);
 app.use('/companies', companiesRoutes);
 app.use('/jobs', jobsRoutes);
-// app.use(cors());
+app.use(cors());
 
 app.use((error, request, response, next) => {
   // format built-in errors
@@ -36,12 +32,10 @@ app.use((error, request, response, next) => {
   }
   // log the error stack if we're in development
   if (process.env.NODE_ENV === 'development') {
-    // console.error(error.stack); //eslint-disable-line no-console
+    console.error(error.stack); //eslint-disable-line no-console
   }
 
   return response.status(error.status).json(error);
 });
 
 module.exports = app;
-
-// module.exports = key;
