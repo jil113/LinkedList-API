@@ -65,8 +65,8 @@ The following list of stories is the main objective for each group to finish by 
 
 The first two stories here are crossed out because they have already been implemented for you! The third one is halfway-done, it just doesn't look pretty yet.
 
-1.  ~~As a user, I should be able to sign up, which directs me to my feed.
-1.  ~~As a user, I should be able to log in, which directs me to my feed.
+1.  As a user, I should be able to sign up, which directs me to my feed.
+1.  As a user, I should be able to log in, which directs me to my feed.
 1.  As a user, I should have a feed which consists of the latest job listings.
 1.  As a user, I should be able to have a profile page with my photo, name, username, current company, and jobs that I have applied to listed.
 1.  As a user, I should be able to click `edit` in the top right corner of my profile, which lets me edit any of my user fields, including changing my `password`.
